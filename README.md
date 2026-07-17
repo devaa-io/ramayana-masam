@@ -11,8 +11,10 @@ Live at https://devaa-io.github.io/ramayana-masam/
 - The share button posts the day's verse to WhatsApp.
 - Everything is a single static HTML file. No backend, no build step.
 
-## Content
+## Content and provenance
 
-25 verses come from the DharmaSearch project's Valmiki Ramayana selection, spanning all seven Kandas. Six widely recited dhyana and nama shlokas (Lokabhiramam, the Rama Nama shloka from the Vishnu Sahasranama tradition, and others) open the month, mark transitions, and close it. Translations aim for plain readability rather than scholarly precision; reflections are editorial.
+The 31-day sequence brings together passages associated with the Ramayana tradition. It includes Valmiki Ramayana verses, later devotional shlokas, traditional maxims and a small number of narrative summaries inherited from the DharmaSearch source collection. Six widely recited dhyana and nama shlokas open the month, mark transitions and close it.
+
+Translations aim for plain readability rather than scholarly precision; reflections are editorial. Provenance is being reviewed against the [National Sanskrit University and IIT Kanpur Valmiki Ramayana](https://www.valmiki.iitk.ac.in/). Until that review is complete, the individual transliterations should not be treated as a critical edition or used as source citations.
 
 Corrections to verse text or translations are very welcome — open an issue.
