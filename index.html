@@ -7,6 +7,7 @@
 <meta name="description" content="A free daily companion for Ramayana Masam (Karkkidakam 1201), 17 July to 16 August 2026. One verse from the Ramayana every day, with translation and a short reflection.">
 <meta property="og:title" content="Ramayana Masam 2026 — Daily Reading Companion">
 <meta property="og:description" content="One Ramayana verse a day through Karkkidakam, 17 July to 16 August 2026. Free, no app, no signup.">
+<meta property="og:image" content="https://devaa-io.github.io/ramayana-masam/og/site.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://devaa-io.github.io/ramayana-masam/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text x=%2750%27 y=%2778%27 font-size=%2780%27 text-anchor=%27middle%27>🪔</text></svg>">
@@ -454,7 +455,8 @@ function dateFor(day) {
 }
 
 const todayNum = Math.min(Math.max(dayNumberFor(istToday()), 1), 31);
-let viewing = todayNum;
+const paramD = parseInt(new URLSearchParams(location.search).get("d"), 10);
+let viewing = (paramD >= 1 && paramD <= 31) ? paramD : todayNum;
 const readSet = new Set(JSON.parse(localStorage.getItem("rm-read") || "[]"));
 
 const el = id => document.getElementById(id);
@@ -466,7 +468,7 @@ function render() {
   el("sanskrit").textContent = d.sanskrit;
   el("translation").textContent = d.translation;
   el("reflection").textContent = d.reflection;
-  const share = `🪔 Ramayana Masam, day ${viewing} of 31\n\n"${d.translation}"\n— ${d.kanda}\n\nRead today's verse: ${SITE}`;
+  const share = `🪔 Ramayana Masam, day ${viewing} of 31\n\n"${d.translation}"\n— ${d.kanda}\n\nRead today's verse: ${SITE}d/${viewing}/`;
   el("share").href = "https://wa.me/?text=" + encodeURIComponent(share);
   const done = readSet.has(viewing);
   el("mark").textContent = done ? "Read ✓" : "Mark as read";
