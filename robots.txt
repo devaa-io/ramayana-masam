@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://devaa-io.github.io/ramayana-masam/sitemap.xml
