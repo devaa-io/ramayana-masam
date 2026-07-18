@@ -242,7 +242,7 @@
   <div class="mala" id="mala" role="listbox" aria-label="Choose a day"></div>
 
   <footer>
-    Selected verses from the Valmiki Ramayana with plain English translations.<br>
+    Selected verses from the Valmiki Ramayana and the Adhyatma Ramayanam Kilippattu tradition, with plain English translations.<br>
     Reflections are editorial. A free companion from the <a href="https://github.com/devaa-io/DharmaSearch">DharmaSearch</a> project.
     <div class="notice" id="notice"></div>
   </footer>
@@ -251,10 +251,16 @@
 <script>
 const DAYS = [
  {
+  "kanda": "Adhyatma Ramayanam · Bala Kandam",
+  "sanskrit": "sriramo jayaramo jayajaya rama srirama jayarama jayajaya rama",
+  "translation": "Victory to Lord Sri Rama! Victory, victory to Rama! Sri Rama is victorious, victory, victory to Rama!",
+  "reflection": "Kerala opens the month with this chant of the Kilippattu; say it once aloud and you have begun."
+ },
+ {
   "kanda": "Dhyana Shloka",
   "sanskrit": "lokabhiramam ranaranga-dhiram rajiva-netram raghuvamsa-natham | karunya-rupam karunakaram tam sri-ramachandram saranam prapadye",
   "translation": "I take refuge in Sri Ramachandra: the delight of all the world, steadfast on the field of battle, lotus-eyed, lord of the Raghu line, compassion in living form.",
-  "reflection": "Light the lamp, sit for a moment, and let the month begin quietly."
+  "reflection": "Light the lamp, sit for a moment, and let the month settle around you."
  },
  {
   "kanda": "Bala Kanda",
@@ -276,15 +282,21 @@ const DAYS = [
  },
  {
   "kanda": "Bala Kanda",
-  "sanskrit": "sa ca sarvagunopetah kausalyaa nanda vardhanah samudra iva gaambhiirye dhairyeNa himavaan iva",
-  "translation": "Endowed with all virtues, the joy of Kausalya, he is deep as the ocean in gravity and firm as the Himalayas in courage.",
-  "reflection": "Depth is quiet; the ocean's gravity does not announce itself."
+  "sanskrit": "buddhimaanmadhurabhashii purvabhashii priyamvadah veeryavaan na cha veeryyena mahataa svena vismitah",
+  "translation": "Intelligent, sweet-spoken, first to greet, speaking kindly, valorous but never boastful of his great prowess.",
+  "reflection": "First to greet, and kind when he speaks: gentleness counted among the marks of greatness."
  },
  {
   "kanda": "Bala Kanda",
   "sanskrit": "maa nishada pratisthaam tvam agamah shaashvatii samah yat krauncha mithunaat ekam avadhih kaama mohitam",
   "translation": "O hunter! May you not achieve rest for eternity, for you killed one of a pair of cranes, absorbed in love.",
   "reflection": "The world's first shloka was born from grief at cruelty; the Ramayana begins in compassion."
+ },
+ {
+  "kanda": "Ayodhya Kanda",
+  "sanskrit": "kausalyaa suprajaa raama poorvaa sandhyaa pravartate udaya tvaam sahasraanshoh ramaa raama maheepatim",
+  "translation": "O Rama, the blessed son of Kausalya, the dawn is breaking. Arise, O lord of the earth, like the rising sun with a thousand rays.",
+  "reflection": "A verse sung to wake a prince gently; let something gentle wake you too."
  },
  {
   "kanda": "Ayodhya Kanda",
@@ -300,9 +312,9 @@ const DAYS = [
  },
  {
   "kanda": "Ayodhya Kanda",
-  "sanskrit": "na dainya na ca maatsaryam na lobho na shubhaa matih na ca api dainya bhavo vaa drsyate raama sevine",
-  "translation": "Neither sorrow, nor jealousy, nor greed, nor impure thought, nor any meanness is found in one who serves Rama.",
-  "reflection": "Notice what is absent from a settled mind before adding anything to your own."
+  "sanskrit": "sneehadd satagunam rajyam tyajeyam na tu raaghavam",
+  "translation": "Out of love, I would give up a kingdom a hundred times over, but never would I give up Raghava (Rama).",
+  "reflection": "Lakshmana's arithmetic: a hundred kingdoms weigh less than one brother."
  },
  {
   "kanda": "Ayodhya Kanda",
@@ -318,15 +330,21 @@ const DAYS = [
  },
  {
   "kanda": "Aranya Kanda",
-  "sanskrit": "aatmaanam manushah raama paapaat rakshatu satatam vane vaa raaja veShme vaa apsu vaa sharaNe api vaa",
-  "translation": "O Rama, a man should constantly protect himself from sin, whether in the forest, the palace, in water, or in any refuge.",
-  "reflection": "The forest and the city offer the same temptations in different clothes."
+  "sanskrit": "mithyaa vaadee narakam praapnoti yah satyam vadati sa param padam gacchati",
+  "translation": "A liar goes to hell; one who speaks the truth attains the supreme goal.",
+  "reflection": "Truthfulness is not decoration on dharma; it is the road itself."
  },
  {
   "kanda": "Aranya Kanda",
   "sanskrit": "ramo vigrahavan dharmah sadhuh satya-parakramah | raja sarvasya lokasya devanam iva vasavah",
   "translation": "Rama is dharma embodied: righteous, of true valour, king of all the world as Indra is king of the gods.",
   "reflection": "This praise is spoken by Maricha, an enemy's counsellor; character is what even opponents concede."
+ },
+ {
+  "kanda": "Adhyatma Ramayanam · Aranya Kandam",
+  "sanskrit": "sitayah sarvabhutanam maata rakshati ya sada tasyaah haranam papistham sarva papa pranaashanam",
+  "translation": "Sita, who always protects all beings like a mother — her abduction is the most sinful act, the destroyer of all sins.",
+  "reflection": "The Kilippattu names Sita a mother to all beings; cruelty to the gentlest weighs heaviest."
  },
  {
   "kanda": "Aranya Kanda",
@@ -341,16 +359,16 @@ const DAYS = [
   "reflection": "Choose allies for their loyalty in your exile, not their usefulness in your victory."
  },
  {
-  "kanda": "Kishkindha Kanda",
-  "sanskrit": "snigdhena dhiiraa vipulena cakShushaa raamo mayaa paarthiva putra iiksitah shuShyat mukhena parishoshitaa dharah tena iiva samvatshar gaNo ativartate",
-  "translation": "With moist, deep, and wide eyes, Rama, the prince, was gazed upon by me. With a withered face and parched lips, thus passed a year for him.",
-  "reflection": "Sometimes devotion is only this: to look, and to keep looking."
- },
- {
   "kanda": "Sundara Kanda · Dhyana",
   "sanskrit": "yatra yatra raghunatha-kirtanam tatra tatra krta-mastakanjalim | bashpavari-paripurna-locanam marutim namata rakshasantakam",
   "translation": "Wherever the name of Rama is sung, there Hanuman stands with head bowed and hands folded, his eyes full of tears. Bow to him, the son of the wind, the ender of demons.",
   "reflection": "Wherever the name is sung, service arrives before it is asked for."
+ },
+ {
+  "kanda": "Sundara Kanda",
+  "sanskrit": "dhrtirutsaahasaahasam balam buddhih paraakramah shad ete yatra vartante tatra devah sahaayakrt",
+  "translation": "Where determination, enthusiasm, boldness, strength, wisdom, and valor exist — there the gods lend their support.",
+  "reflection": "Where effort, courage and clear thought gather, help arrives; Hanuman leapt before he was certain."
  },
  {
   "kanda": "Sundara Kanda",
@@ -360,21 +378,21 @@ const DAYS = [
  },
  {
   "kanda": "Sundara Kanda",
-  "sanskrit": "buddhir balamyadhiShThaanaM dharmo vidyaa ca panchami etaani yasya vartante tasya devah sahaayakrt",
-  "translation": "Intelligence, strength, a good foundation, righteousness, and knowledge as the fifth - to whom these five belong, the gods become his helpers.",
-  "reflection": "Hanuman crosses the ocean on preparation, not on luck."
- },
- {
-  "kanda": "Sundara Kanda",
   "sanskrit": "na hi praaNaparikShepe mama raameNa samgamah sukhaM caa aham rameta iha paraH ca aapi mama shashvatam",
   "translation": "If I give up my life, I shall never meet Rama again. Let me endure here, for my patience is eternal.",
   "reflection": "Sita's courage is endurance: to hold on one more day, and then another."
  },
  {
+  "kanda": "Adhyatma Ramayanam · Yuddha Kandam",
+  "sanskrit": "na me prana viyogena na rajyena na sampada ramasya darshanam vinaa kshanamapi sukhavahah",
+  "translation": "Without the sight of Rama, not even a moment brings happiness — not through life itself, not through kingdom, not through wealth.",
+  "reflection": "A measure for your own life: what is the one sight without which nothing else counts?"
+ },
+ {
   "kanda": "Sundara Kanda",
-  "sanskrit": "nahi me jeevitena artho na arthairna ca sukhena vaa raamamarthaH anaagatya yaa jeevami vipulaamshucham",
-  "translation": "I have no use for life, wealth, or happiness while Rama has not come. That I live bearing such immense sorrow is itself a wonder.",
-  "reflection": "Longing, carried with dignity, is itself a form of strength."
+  "sanskrit": "ram sthithah samastha jagadeshu shakti sthitah shakti sthitah prabhu sthaapayitvaa",
+  "translation": "Rama dwells in all worlds through His power, and through that power, the Lord establishes all.",
+  "reflection": "The search succeeds because what is sought was never truly absent."
  },
  {
   "kanda": "Yuddha Kanda",
@@ -384,15 +402,9 @@ const DAYS = [
  },
  {
   "kanda": "Yuddha Kanda",
-  "sanskrit": "api svarNamayii lankaa na me lakShmaNa rochate jananii janma bhuumish ca svargaadapi gariyasii",
-  "translation": "Even this golden Lanka does not appeal to me, O Lakshmana. One's mother and motherland are greater than heaven itself.",
-  "reflection": "No gold outweighs the place and the people that made you."
- },
- {
-  "kanda": "Yuddha Kanda",
-  "sanskrit": "vijayeta suparvaano devendra sama vikramah raavaNo naama durvritto rakshasaam iishvarah prabhuh",
-  "translation": "Let Ravana, the wicked lord of Rakshasas, whose valor equals that of Indra himself, be conquered by the noble ones.",
-  "reflection": "Respect the full strength of what you must still oppose."
+  "sanskrit": "vinaashakale vipariita buddhih",
+  "translation": "At the time of destruction, the intellect works in reverse.",
+  "reflection": "When everything is collapsing, the mind turns traitor first; that is why practice happens on the calm days."
  },
  {
   "kanda": "Yuddha Kanda",
@@ -401,22 +413,16 @@ const DAYS = [
   "reflection": "Before the decisive battle Rama is taught to face the sun and steady himself; begin your battles rested and clear."
  },
  {
-  "kanda": "Dhyana Shloka",
-  "sanskrit": "apadam apahartaram dataram sarva-sampadam | lokabhiramam sri-ramam bhuyo bhuyo namamy aham",
-  "translation": "Again and again I bow to Sri Rama, the remover of dangers, the giver of every prosperity, the delight of the world.",
-  "reflection": "Bow to what removes danger, and remember to be that for someone else."
+  "kanda": "Yuddha Kanda",
+  "sanskrit": "praanam tyajanti ye shuuraa dharmaartham te mahaashayaah sarvalokahitaah santo dharmo jayati naadharmaah",
+  "translation": "Those heroes who sacrifice their lives for dharma are noble-hearted. Those who benefit all beings are saints. Dharma triumphs, never adharma.",
+  "reflection": "Dharma triumphs, never adharma: the epic's whole argument in four words."
  },
  {
-  "kanda": "Uttara Kanda",
-  "sanskrit": "raamo raajamaNih sadaa vijayate raamam ramesham bhaje raameNaabhi hataa nishaacharachamuu raamaaya tasmai namah",
-  "translation": "Rama, the jewel among kings, always triumphs. I worship Rama, the Lord of Lakshmi. The demon army was destroyed by Rama. Salutations to that Rama.",
-  "reflection": "A victory worth singing about leaves the victor worth following."
- },
- {
-  "kanda": "Uttara Kanda",
-  "sanskrit": "raamaaya raamabhadraaya raamacandraaya vedhase raghunaathaaya naathaaya siitaayaah pataye namah",
-  "translation": "Salutations to Rama, to the auspicious Rama, to Ramachandra the creator, to the Lord of the Raghus, to the protector, and to the husband of Sita.",
-  "reflection": "Repetition is not emptiness; it is how the mind learns to rest."
+  "kanda": "Yuddha Kanda",
+  "sanskrit": "api svarNamayii lankaa na me lakShmaNa rochate jananii janma bhuumish ca svargaadapi gariyasii",
+  "translation": "Even this golden Lanka does not appeal to me, O Lakshmana. One's mother and motherland are greater than heaven itself.",
+  "reflection": "No gold outweighs the place and the people that made you."
  },
  {
   "kanda": "Uttara Kanda",
@@ -425,16 +431,10 @@ const DAYS = [
   "reflection": "The month's promise: the story itself does the cleansing."
  },
  {
-  "kanda": "Nama Mahima",
-  "sanskrit": "mata ramo mat-pita ramachandrah svami ramo mat-sakha ramachandrah | sarvasvam me ramachandro dayalur nanyam jane naiva jane na jane",
-  "translation": "Rama is my mother, Rama my father, my lord and my friend. The compassionate Ramachandra is my everything. I know no other. None at all.",
-  "reflection": "When everything else is uncertain, choose one thing to be your everything."
- },
- {
-  "kanda": "Nama Mahima",
-  "sanskrit": "sri rama rama rameti rame rame manorame | sahasranama tat tulyam rama-nama varanane",
-  "translation": "Repeating Rama, Rama, Rama, the mind comes to rest in Rama, in whom it delights. The name of Rama equals a thousand names.",
-  "reflection": "One name said with the whole heart is worth a thousand; the month ends where devotion begins."
+  "kanda": "Adhyatma Ramayanam · Bala Kandam",
+  "sanskrit": "rama rama mahadeva rama rama mahaaprabho rama rama parambrahma satchidananda vigraham",
+  "translation": "Rama, Rama, O Great God! Rama, Rama, O Supreme Lord! Rama, Rama, O Supreme Brahman, embodiment of Existence-Consciousness-Bliss!",
+  "reflection": "Close the month the way Kerala does, with the name itself; everything the story taught is folded inside it."
  }
 ];
 
