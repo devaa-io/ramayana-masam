@@ -496,7 +496,7 @@ function render() {
   el("sanskrit").textContent = d.sanskrit;
   el("translation").textContent = d.translation;
   el("reflection").textContent = d.reflection;
-  const share = `🪔 Ramayana Masam, day ${viewing} of 31\n\n"${d.translation}"\n— ${d.kanda}\n\nRead today's verse: ${SITE}`;
+  const share = `🪔 Ramayana Masam, day ${viewing} of 31\n\n"${d.translation}"\n— ${d.kanda}\n\nOpen the daily companion: ${SITE}`;
   el("share").href = "https://wa.me/?text=" + encodeURIComponent(share);
   const done = readSet.has(viewing);
   el("mark").textContent = done ? "Read ✓" : "Mark as read";
